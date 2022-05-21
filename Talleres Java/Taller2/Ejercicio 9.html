@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°2: Condicionales-Ejercicio 9</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°2: CONDICIONALES- EJERCICIO 9</h1>
+
+
+        <p class="enunciado">El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el
+            área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio
+            solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea
+            calcular el área de un rectángulo, triángulo
+            o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo
+            resultado.</p>
+        <pre>
+            <code class="codigo">
+                package Ejercicio9;
+
+                import java.util.Scanner;
+                
+                public class Main {
+                
+                    public static void main(String[] args) {
+                        Menu menu1 = new Menu();
+                        Rectangulo rectangulo = new Rectangulo();
+                        Triangulo triangulo = new Triangulo();
+                        Trapecio trapecio = new Trapecio();
+                
+                        Scanner lectura = new Scanner(System.in);
+                
+                        boolean menu = true;
+                
+                        while (menu) {
+                            menu1.menuInicio();
+                
+                            int opcion = lectura.nextInt();
+                            System.out.println("");
+                
+                            switch (opcion) {
+                                case 1:
+                                    rectangulo.areaRectangulo();
+                                    menu = menu1.volverMenu();
+                                    break;
+                
+                                case 2:
+                                    triangulo.areaTriangulo();
+                                    menu = menu1.volverMenu();
+                                    break;
+                
+                                case 3:
+                                    trapecio.areaTrapecio();
+                                    menu = menu1.volverMenu();
+                                    break;
+                
+                                case 4:
+                                    System.out.println("'GRACIAS POR VISITARNOS, VUELVA PRONTO'");
+                                    menu = false;
+                                    break;
+                
+                            }
+                        }
+                    }
+                }
+                
+            </code>
+        </pre>
+
+        <p>Archivos relacionados
+        <ul>
+            <li class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio9/Rectangulo.java">Rectangulo</a>
+                </button>
+            </li>
+            <li class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio9/Menu.java">Menu</a>
+                </button>
+            </li>
+            <li class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio9/Triangulo.java">Triangulo</a>
+                </button>
+            </li>
+            <li class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio9/Trapecio.java">Trapecio</a>
+                </button>
+            </li>
+        </ul>
+        </p>
+
+        <br /><br />
+
+        <nav>
+            <a class="regresar" href="Taller2.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

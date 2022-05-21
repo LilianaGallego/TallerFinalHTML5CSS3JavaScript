@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°5: Funciones-Condicionales-Ejercicio 6</title>
+    <link rel="stylesheet" href="../../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../../css/estilosPortafolio.css">
+    <script defer src="../../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°5: FUNCIONES-CONDICIONALES- EJERCICIO 6</h1>
+
+
+        <p class="enunciado">El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos 
+            hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</p>
+        <pre>
+            <code class="codigo">
+                //TALLER 5 CONDICIONALES
+
+                SubProceso elegir(seleccion)
+                    
+                    Definir ingreso, salida, arreglos Como Caracter;
+                    
+                    Segun seleccion Hacer
+                        1:
+                            Escribir "Observaciones del ingreso de la moto por parte del cliente";
+                            Leer ingreso;
+                            Escribir "La moto ingresa al taller por ", ingreso;
+                            
+                        2:
+                            Escribir "Novedades de la salida de la moto";
+                            Leer salida;
+                            Escribir "La moto sale del taller con las siguientes novedades: ", salida;
+                            
+                        3:
+                            Escribir "Especifique los arreglos realizados a la moto";
+                            Leer arreglos;
+                            Escribir "Los arreglos que se le realizaron a la moto son los siguiente: ", arreglos;
+                            
+                            
+                    FinSegun
+                FinSubProceso
+                
+                SubProceso  menuInicio()
+                    Escribir "Bienvenidos al taller de motos El Maquinista";
+                    Escribir "";
+                    Escribir "Seleccione la opcion que requiere";
+                    Escribir "1. Ingreso";
+                    Escribir "2. Salida";
+                    Escribir "3. Arreglos";
+                    
+                FinSubProceso
+                //---------------------------------------------------------------------------------------
+                Proceso Taller5
+                    Definir seleccion Como Entero;
+                    
+                    menuInicio();
+                    Leer seleccion;
+                    elegir(seleccion);
+                FinProceso
+                
+            </code>
+        </pre>
+        <nav>
+            <a class="regresar" href="Taller5FuncionesCondicionales.html">
+                <img class="img-regresar" src="../../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

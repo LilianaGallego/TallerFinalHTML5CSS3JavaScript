@@ -1,0 +1,299 @@
+.bloque{
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    color:rgb(38, 38, 136);
+    border: solid rgb(38, 38, 136);
+    
+}
+
+.texto, .datos{
+    font-size: larger; 
+}
+
+
+.btn-titulo{
+    background-color: aqua;
+    color: blue;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    box-shadow: 6px 20px 10px darkblue;
+    border-radius: 10px;
+}
+
+.btn-titulo:after{
+    content:'\002b';
+    float: right;
+      
+}
+
+.btn-titulo.active:after{
+    content: '\002d'; 
+    font-size: 40px;
+    float: right; 
+}
+
+.actve, .btn-titulo:hover{
+    background-color: rgb(230, 101, 230);
+    box-shadow: 6px 20px 10px rgb(83, 0, 139);
+    color: rgb(58, 14, 71);
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.btn-titulo:visited{
+    background-color: rgb(221, 162, 190);
+    box-shadow: 6px 20px 10px rgb(139, 0, 58);
+    color: rgb(71, 14, 42);
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.texto{
+    padding: 15px 20px;
+    display: none;
+    overflow: hidden;
+}
+
+.titulo, .btn-titulo{
+    text-align: center;
+    color: darkblue;
+    
+}
+
+.encabezado{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.foto{
+    border: solid 10px rgb(95, 95, 153);  
+    width: 12%;
+    text-align: center;
+    box-shadow: 6px 20px 10px darkblue;
+}
+
+.fondo-index {
+    background-color:#a6c3ce;
+}
+
+.fondo-info{
+    background-color:rgb(201, 155, 201);
+} 
+
+.experiencia{
+    background-color:rgb(148, 182, 134);
+}
+
+.refp{
+    background-color:rgb(123, 143, 125);
+} 
+
+.reff{
+    background-color:rgb(135, 168, 163);
+}
+.estudios{
+    background-color: rgb(192, 147, 165);
+    
+}
+
+.portafolio{
+    background-color: rgb(224, 192, 205);
+    
+}
+
+.celda1{
+    width: 2px;
+}
+
+.celda2{
+    width: 20%;
+}
+
+img{
+    width: 60%;
+}
+
+.columna1{
+    
+    position: absolute;
+    margin-right: auto;
+}
+
+.columna2, #columna2{
+    position: relative;
+    margin-left: 500px;
+   
+}
+
+#columna2{
+    position: relative;
+    margin-left: 350px;
+   
+}
+
+.regresar,a{
+    font-size: larger;
+    color: blueviolet;
+}
+
+a{
+    color:blue
+}
+
+.img-regresar{
+    width: 5%;
+    margin-left: 15px;
+}
+.refp{
+    background-color:rgb(211, 238, 213); 
+}
+
+.periodo{
+    width: 1%;
+    white-space: nowrap;
+}
+.info:link,.info:visited{
+    font-size:larger;
+    text-align: center;
+    text-decoration: none;
+    color: darkblue;
+}
+
+.info:hover, .info:active{
+    background-color: aqua;
+    color: rgb(14, 68, 47);
+    border: solid rgb(3, 34, 8) 2px;
+    border-radius: 15px;
+    padding: 10px 25px ;
+
+}
+
+.info:active{
+    background-color: rgb(180, 162, 197);
+    color: rgb(127, 0, 139);
+}
+
+.descargar:link, .descargar:visited, .regresar:link,.regresar:visited{
+    font-size:larger;
+    background-color: rgb(241, 136, 215);
+    padding: 15px 5px;
+    text-align: center;
+    border: solid rgb(192, 16, 148) 2px;
+    border-radius: 15px;
+    color: rgb(122, 21, 80);
+    text-decoration: none;
+}
+
+.regresar:link,.regresar:visited{
+    padding: 35px 5px 1px;
+    
+}
+
+.descargar:hover, .descargar:active,.regresar:hover, .regresar:active{
+    color: rgb(7, 77, 11);
+    background-color: rgb(77, 217, 241);
+    border: solid rgb(14, 145, 20) 2px;
+    border-radius: 15px;
+    width: fit-content;
+}    
+
+.descargar:active, .regresar:active{
+    color: rgb(15, 50, 95);
+    background-color: rgb(50, 180, 72);
+}
+
+header{
+    background-color: none;
+    color: blue;
+    position: relative;
+}
+
+header::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.site-nav{
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background: #7da4d1;
+    height: 0;
+    overflow: hidden;
+}
+
+.site-nav-open{
+    
+    height: auto;
+}
+.site-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: solid orangered 2px;
+    border-radius: 5px;
+}
+.site-nav li:last-child{
+    border-bottom: none;
+}
+.site-nav li{
+    border-bottom: 1px solid #6282a7;
+    color: darkblue;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.site-nav li:hover, .site-nav li:focus{
+    
+    color: red;
+}
+
+.menu{
+    
+    position: absolute;
+    top: 0;
+    background: none;
+    left: 0;
+}
+
+.icono,.icono::before,.icono::after{
+   
+    width: 2.4em;
+    text-align: center;
+    padding: 0.3em;
+}
+
+.btn-color{
+
+    display: block;
+    height: 44px;
+    width: 100%;
+    border: solid 4.5px orangered;
+    border-radius: 3px;
+    box-shadow:5px 5px 6px rgb(63, 48, 14);
+}
+.color1{
+    background-color: #ffb6c1;
+}
+
+.color2{
+    background-color: aquamarine;
+}
+
+.color3{
+    background-color: lightgreen;
+}
+
+input{
+    cursor: pointer;
+    outline: none;
+    
+}

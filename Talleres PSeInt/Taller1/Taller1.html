@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°1: Variables e impresión</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°1: VARIABLES E IMPRESION</h1>
+
+        <div class="bloque">
+            <div class="mostrarVideo">
+                <video class="fm-video video-js" controls id="fm-video">
+                    <source src="../videos/Taller1.mkv" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <ul>
+            <li class="ejercicios">Ejercicio 1</li>
+            <p class="enunciado">Realizar un programa el cual solicite su nombre y apellidos.</p>
+            <pre>
+                <code class="codigo">
+                Proceso MiPrimeraApp
+                    Definir nombre Como Caracter;
+                    Definir apellidos Como Caracter;
+                    
+                    Escribir "¿Cuál es tu nombre?";
+                    leer nombre;
+                    
+                    Escribir "¿Cuáles son tus apellidos?";
+                    leer apellidos;
+
+                FinProceso
+                </code>
+            </pre>
+
+            <li class="ejercicios">Ejercicio 2</li>
+            <p class="enunciado">Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</p>
+            <pre>
+                <code class="codigo">
+                Proceso MiPrimeraApp
+                    Definir nombre Como Caracter;
+                    Definir apellidos Como Caracter;
+                    Definir edad Como Entero;
+                    Definir estatura Como Real;
+                    
+                    Escribir "¿Cuál es tu nombre?";
+                    leer nombre;
+                    
+                    Escribir "¿Cuáles son tus apellidos?";
+                    leer apellidos;
+                    
+                    Escribir "¿Cuál es tu edad?";
+                    leer edad;
+                    
+                    Escribir "¿Cuál es tu estatura en metros?";
+                    leer estatura;
+                
+                FinProceso
+                </code>
+            </pre>
+
+            <li class="ejercicios">Ejercicio 3</li>
+            <p class="enunciado">
+                Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y
+                apellidos de su padre y madre.
+                Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de
+                [Nombre de la Madre] y [Nombre del Padre].
+            </p>
+            <pre>
+                <code class="codigo">
+                Proceso MiPrimeraApp
+                    Definir nombre Como Caracter;
+                    Definir apellidos Como Caracter;
+                    Definir nombrePadre Como Caracter;
+                    Definir apellidosPadre Como Caracter;
+                    Definir nombreMadre Como Caracter;
+                    Definir apellidosMadre Como Caracter;
+                    
+                    Escribir "¿Cuál es tu nombre?";
+                    leer nombre;
+                    
+                    Escribir "¿Cuáles son tus apellidos?";
+                    leer apellidos;
+                    
+                    Escribir "¿Cuál es el nombre de tu padre?";
+                    leer nombrePadre;
+                    
+                    Escribir "¿Cuáles son los apellidos de tu padre?";
+                    leer apellidosPadre;	
+                    
+                    Escribir "¿Cuál es el nombre de tu madre?";
+                    leer nombreMadre;
+                    
+                    Escribir "¿Cuáles son los apellidos de tu madre?";
+                    leer apellidosMadre;
+                    
+                    Escribir "Yo ",nombre," ",apellidos," soy hija de "," ",nombreMadre," ",apellidosMadre,
+                    " y ",nombrePadre," ",apellidosPadre;
+                
+            
+                FinProceso
+                </code>
+            </pre>
+
+            <li class="ejercicios">Ejercicio 4</li>
+            <p class="enunciado">
+                Realizar un programa el cual solicite el nombre de una ciudad capital y el país.
+                Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la
+                capital del país [Nombre del País]
+            </p>
+            <pre>
+                <code class="codigo">
+                Proceso MiPrimeraApp
+                    Definir ciudadCapital Como Caracter;
+                    Definir pais Como Caracter;
+                        
+                    Escribir "Ingrese el nombre de una ciudad capital";
+                    leer ciudadCapital;
+                    
+                    Escribir "Ingrese el país de la ciudad capital";
+                    leer pais;
+                    
+                    Escribir "La ciudad ",ciudadCapital," es la capital del país ",pais;
+
+                FinProceso
+                </code>
+            </pre>
+
+            <li class="ejercicios">Ejercicio 5</li>
+            <p class="enunciado">
+                Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de
+                mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente
+                mensaje:
+                [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y
+                [Nombre Completo] es actualmente su dueño(a).
+            </p>
+            <pre>
+                <code class="codigo">
+                Proceso MiPrimeraApp
+                    Definir nombreMascota Como Caracter;
+                    Definir edadMascota Como Caracter;
+                    Definir tipoMascota Como Caracter;
+                    Definir propietario Como Caracter;
+                    
+                    Escribir "¿Cuál es el nombre de tu mascota?";
+                    leer nombreMascota;
+                        
+                    Escribir "¿Cuál es la edad de tu mascota?";
+                    leer edadMascota;
+                    
+                    Escribir "¿Que tipo de mascota es?";
+                    leer tipoMascota;
+                    
+                    Escribir "¿Cuál es tu nombre completo?";
+                    leer propietario;
+                    
+                    Escribir  nombreMascota, " es un(a) ", tipoMascota, " el cual tiene ", edadMascota, " años de edad y ",
+                    propietario, " es actualmente su dueño(a)";
+                
+                FinProceso
+            
+                </code>
+            </pre>
+        </ul>
+
+        <nav>
+            <a class="regresar" href="../../Talleres PSeInt/indexPSeInt.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

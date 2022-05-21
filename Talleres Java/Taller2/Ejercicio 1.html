@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°2: Condicionales-Ejercicio 1</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../../Talleres PSeInt/TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°2: CONDICIONALES- EJERCICIO 1</h1>
+
+
+        <p class="enunciado">Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor
+            o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</p>
+        <pre>
+            <code class="codigo">
+                package Ejercicio1;
+
+                import java.util.Scanner;
+                
+                public class Main {
+                
+                    public static void main(String[] args) {
+                        Scanner lectura = new Scanner(System.in);
+                
+                        System.out.println("Por favor ingrese su edad");
+                        int edad = lectura.nextInt();
+                
+                        Persona persona1 = new Persona(edad);
+                        persona1.mayorEdad(edad);
+                
+                    }
+                }
+                
+            </code>
+        </pre>
+        <div>
+        <p>Archivos relacionados
+        <ul>
+            <li>
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio1/Persona.java">Persona</a>
+                </button>
+
+            </li>
+        </ul>
+        </p>
+        <br/><br/>
+        </div>
+        <nav>
+            <a class="regresar" href="Taller2.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

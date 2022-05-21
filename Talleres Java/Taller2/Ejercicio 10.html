@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°2: Condicionales-Ejercicio 10</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°2: CONDICIONALES- EJERCICIO 10</h1>
+
+
+        <p class="enunciado">El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una
+            aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los
+            atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o
+            consultas de valor. En los ingresos no
+            se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la
+            cuenta.</p>
+        <pre>
+            <code class="codigo">
+                package Ejercicio10;
+
+                import java.util.Scanner;
+                
+                public class Main {
+                
+                    public static void main(String[] args) {
+                        Menu menu1 = new Menu();
+                        Persona persona = new Persona();
+                        Cuenta cuenta = new Cuenta();
+                        Scanner lectura = new Scanner(System.in);
+                
+                        boolean menu = true;
+                        while (menu) {
+                            menu1.menuInicio();
+                            int opcion = lectura.nextInt();
+                            System.out.println("");
+                
+                            switch (opcion) {
+                                case 1:
+                                    cuenta.crearTitular(persona);
+                                    menu1.proceso();
+                                    int opcionProceso = lectura.nextInt();
+                                    System.out.println("");
+                                    switch (opcionProceso) {
+                                        case 1:
+                                            cuenta.realizarIngresos(persona);
+                                            menu = menu1.volverMenu();
+                                            break;
+                
+                                        case 2:
+                                            cuenta.realizarRetiros(persona);
+                                            menu = menu1.volverMenu();
+                                            break;
+                
+                                        case 3:
+                                            cuenta.consultarSaldo(persona);
+                                            menu = menu1.volverMenu();
+                                            break;
+                
+                                        case 4:
+                                            menu = menu1.volverMenu();
+                                            break;
+                
+                                        case 5:
+                                            menu = false;
+                                            break;
+                                    }
+                                    break;
+                
+                                case 2:
+                                    menu1.ingresoCuenta();
+                                    int opcionIngreso = lectura.nextInt();
+                                    if (opcionIngreso == 1) {
+                                        cuenta.ingresarCuenta(persona);
+                                        menu1.proceso();
+                                        int opcionProceso2 = lectura.nextInt();
+                                        System.out.println("");
+                                        switch (opcionProceso2) {
+                                            case 1:
+                                                cuenta.realizarIngresos(persona);
+                                                menu = menu1.volverMenu();
+                                                break;
+                
+                                            case 2:
+                                                cuenta.realizarRetiros(persona);
+                                                menu = menu1.volverMenu();
+                                                break;
+                
+                                            case 3:
+                                                cuenta.consultarSaldo(persona);
+                                                menu = menu1.volverMenu();
+                                                break;
+                
+                                            case 4:
+                                                menu = menu1.volverMenu();
+                                                break;
+                
+                                            case 5:
+                                                menu = false;
+                                                break;
+                                        }
+                                    } else if (opcionIngreso == 2) {
+                                        System.out.println("'GRACIAS POR VISITARNOS, VUELVA PRONTO'");
+                                        menu = false;
+                                    }
+                                    break;
+                
+                                case 3:
+                                    menu = false;
+                                    break;
+                            }
+                        }
+                    }
+                
+                }
+                
+            </code>
+        </pre>
+
+        <p>Archivos relacionados
+        <ul>
+            <li class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio10/Persona.java">Persona</a>
+                </button>
+            </li>
+            <li class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio10/Menu.java">Menu</a>
+                </button>
+            </li>
+            <li class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio10/Cuenta.java">Cuenta</a>
+                </button>
+            </li>
+        </ul>
+        </p>
+
+        <br /><br />
+
+        <nav>
+            <a class="regresar" href="Taller2.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

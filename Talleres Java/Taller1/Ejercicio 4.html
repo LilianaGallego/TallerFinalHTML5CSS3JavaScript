@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°1: Variables e impresión-Ejercicio 4</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">>TALLER N°1: VARIABLES E IMPRESION- EJERCICIO 4</h1>
+
+
+        <p class="enunciado">
+                Realizar un programa el cual solicite el nombre de una ciudad capital y el país.
+                Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la
+                capital del país [Nombre del País]
+            </p>
+        <pre>
+            <code class="codigo">
+                package Ejercicio4;
+
+                import java.util.Scanner;
+
+                public class Main {
+
+                    public static void main(String[] args) {
+                        Scanner lectura = new Scanner(System.in);
+
+                        System.out.println("Ingrese el nombre de una ciudad capital");
+                        String ciudadCapital = lectura.nextLine();
+                        System.out.println("Ingrese el país de la ciudad capital");
+                        String pais = lectura.nextLine();
+
+                        Ciudad ciudad1 = new Ciudad(ciudadCapital, pais);
+
+                        System.out.println("La ciudad " + ciudad1.getCiudadCapital() + " es la capital del país "
+                                + ciudad1.getPais());
+                    }
+                }           
+            
+            </code>
+        </pre>
+        <p>Archivos relacionados
+        <ul>
+            <li  class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller1/src/Ejercicio4/Ciudad.java">Ciudad</a>
+                </button>
+            </li>
+            
+        </ul>
+        </p>
+
+        <br /><br />
+        <nav>
+            <a class="regresar" href="Taller1.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

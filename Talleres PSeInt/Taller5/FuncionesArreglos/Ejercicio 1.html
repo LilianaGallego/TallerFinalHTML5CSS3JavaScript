@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°5: Funciones-Arreglos-Ejercicio 1</title>
+    <link rel="stylesheet" href="../../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../../css/estilosPortafolio.css">
+    <script defer src="../../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°5: FUNCIONES DEL TALLER DE ARREGLOS- EJERCICIO 1</h1>
+
+
+        <p class="enunciado">Crear un vector de tipo Entero con 5 posiciones, llenarlo 
+            con información solicitada al usuario. Después de recoger toda la información,
+             se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:
+            <br>
+            [0] = 55 <br>
+            [1] = 99 <br>
+            [2] = 11 <br>
+            [3] = 56 <br>
+            [4] = 69 <br>
+        <pre>
+            <code class="codigo">
+                //TALLER 5 ARREGLOS
+
+                SubProceso limpiarLaPantalla()
+                    Escribir "";
+                    Esperar 4 Segundos;
+                    Limpiar Pantalla;
+                FinSubProceso
+                
+                SubProceso ciclo()
+                    Definir indice, dato, x Como Entero;
+                    Dimension dato[5];
+                    //-------------------------------------------
+                    x<-0;
+                    Escribir "Ingrese 5 numeros";
+                    Mientras x<=4 Hacer
+                        
+                        Escribir "N°",x+1 ;
+                        leer dato[x];
+                        Escribir "";
+                        x<-x+1;
+                    FinMientras
+                    
+                    limpiarLaPantalla();
+                    
+                    Escribir "Esta es la informacion del arreglo:";
+                    
+                    Para  indice<-0 hasta 4 Hacer
+                        
+                        Escribir "[", indice,"]=", dato[indice];
+                    FinPara
+                FinSubProceso
+                //---------------------------------------------------------------------------------------
+                Proceso Taller5
+                    
+                    ciclo();
+                FinProceso
+            </code>
+        </pre>
+        <nav>
+            <a class="regresar" href="Taller5FuncionesArreglos.html">
+                <img class="img-regresar" src="../../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°3: Ciclos-Ejercicio 1</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°3: CICLOS- EJERCICIO 1</h1>
+
+        <p class="enunciado">Realizar la siguiente figura por medio del ciclo Para
+
+        </p>
+        <div class="contenedor">
+            <img width="50%" src="../../Talleres PSeInt/imagenes/1643643915_01. Taller Ciclos.png" alt="">
+        </div>
+        <pre>
+            <code class="codigo">
+                package Ejercicio1;
+
+                import java.util.*;
+                
+                public class Main {
+                
+                    public static void main(String[] args) {
+                        Figura figura = new Figura();
+                        List asterisco = new ArrayList();
+                
+                        String linea = "**********";
+                        for (int i = 0; i < 11; i++) {
+                
+                            figura.setAsterisco(linea.substring(0, i));
+                            asterisco.add(figura.getAsterisco());
+                
+                        }
+                        figura.crearFigura(asterisco);
+                    }
+                }
+            </code>
+        </pre>
+
+        <p>Archivos relacionados
+        <ul>
+            <li>
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller3/src/Ejercicio1/Figura.java">Figura</a>
+                </button>
+            </li>
+        </ul>
+        </p>
+
+        <br /><br />
+
+        <nav>
+            <a class="regresar" href="Taller3.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°3: Ciclos-Ejercicio 5</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°3: CICLOS- EJERCICIO 5</h1>
+
+
+        <p class="enunciado">Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</p>
+        <div class="contenedor">
+            <img width="120%" src="../imagenes/1643644509_05. Taller Ciclos.png" alt="">
+        </div> 
+
+        <pre>
+            <code class="codigo">
+            Proceso Taller3
+                Definir  nombre,saludo Como Caracter;
+                Definir opcion Como Entero;
+                Definir menu Como Logico;
+                
+                menu<-Verdadero;
+                
+                Mientras  menu=Verdadero Hacer
+                    Escribir "Por favor elija la opcion de menú que desea";
+                    Escribir "";
+                    Escribir "Menú de Usuario";
+                    Escribir "1. Captura de nombre";
+                    Escribir "2. Saludar persona";
+                    Escribir "3. Salir del sistema";
+                    Escribir "";
+                    leer opcion;
+                    Segun opcion Hacer
+                        1:
+                            Escribir "Por favor digite su nombre";
+                            leer nombre;
+                            Escribir "";
+                            
+                        2:
+                            Esperar 4 Segundos;
+                            Limpiar Pantalla;
+                            Escribir "Hola ",nombre, " bienvenid@ a nuestro sistema";
+                            Escribir "";
+                            
+            
+                        De Otro Modo:
+                            menu<-Falso;
+                    FinSegun
+                FinMientras
+                
+            FinProceso
+            
+            
+            </code>
+        </pre>
+        <nav>
+            <a class="regresar" href="Taller3.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

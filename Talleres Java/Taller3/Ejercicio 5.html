@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°3: Ciclos-Ejercicio 5</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°3: CICLOS- EJERCICIO 5</h1>
+
+
+        <p class="enunciado">Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el
+            usuario desee terminar dicho ciclo.</p>
+        <div class="contenedor">
+            <img width="120%" src="../../Talleres PSeInt/imagenes/1643644509_05. Taller Ciclos.png" alt="">
+        </div>
+
+        <pre>
+            <code class="codigo">
+                package Ejercicio5;
+
+                import java.util.Scanner;
+                
+                public class Main {
+                
+                    public static void main(String[] args) {
+                        Scanner lectura = new Scanner(System.in);
+                        Scanner dato = new Scanner(System.in);
+                        Persona persona = new Persona();
+                        Menu menu1 = new Menu();
+                        String nombre = "";
+                
+                        boolean menu = true;
+                
+                        while (menu) {
+                            menu1.bienvenida();
+                            int opcion = lectura.nextInt();
+                            System.out.println("");
+                
+                            switch (opcion) {
+                                case 1:
+                                    System.out.println("Por favor digite su nombre");
+                                    nombre = dato.nextLine();
+                                    persona.setNombre(nombre);
+                
+                                    menu = menu1.volverMenu();
+                                    break;
+                
+                                case 2:
+                                    if (nombre.isEmpty()) {
+                                        System.out.println("Debe elegir la opcion captura nombre para saludarlo");
+                                        menu = menu1.volverMenu();
+                                        break;
+                                    } else {
+                                        persona.saludar();
+                                        menu = menu1.volverMenu();
+                                        break;
+                                    }
+                
+                                case 3:
+                                    menu = false;
+                                    break;
+                            }
+                        }
+                
+                    }
+                
+                }
+                
+            </code>
+        </pre>
+
+        <p>Archivos relacionados
+        <ul>
+            <li>
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller3/src/Ejercicio5/Persona.java">Persona</a>
+                </button>
+            </li>
+            <li>
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller3/src/Ejercicio5/Menu.java">Menu</a>
+                </button>
+            </li>
+        </ul>
+        </p>
+
+        <br /><br />
+        <nav>
+            <a class="regresar" href="Taller3.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

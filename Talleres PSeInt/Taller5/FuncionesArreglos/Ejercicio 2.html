@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°5: Funciones-Arreglos-Ejercicio 2</title>
+    <link rel="stylesheet" href="../../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../../css/estilosPortafolio.css">
+    <script defer src="../../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°5: FUNCIONES DEL TALLER DE ARREGLOS- EJERCICIO 2 </h1>
+
+
+        <p class="enunciado">Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado
+             con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a 
+             recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares 
+             e impares. Ejemplo <br>
+            Números pares: 2, 4, 6, 8, 10 <br>
+            Números impares: 1, 3, 5, 7, 9</p>
+        <pre>
+            <code class="codigo">
+                //TALLER 5 ARREGLOS
+
+                SubProceso numerosImpares(dato)
+                    Definir indice Como Entero;
+                    
+                    Escribir "Numeros impares:" Sin Saltar;
+                    Para  indice<-0 hasta 19 Hacer
+                        si ((dato[indice])%2) <>0 Entonces
+                            Escribir dato[indice], ", "Sin Saltar ;
+                        FinSi
+                    FinPara
+                FinSubProceso
+                
+                SubProceso  numerosPares(dato)
+                    Definir indice Como Entero;
+                        
+                    Escribir "Numeros pares:" Sin Saltar;
+                    Para  indice<-0 hasta 19 Hacer
+                        si ((dato[indice])%2) = 0 Entonces
+                            Escribir dato[indice], ", "Sin Saltar ;
+                        FinSi
+                    FinPara
+                FinSubProceso
+                
+                SubProceso ciclo()
+                    Definir dato, x  Como Entero;
+                    Dimension dato[20];
+                    //--------------------------------------------------
+                    x<-0;
+                    Escribir "Ingrese 20 numeros aleatorios de 0 a 100";
+                    Mientras x<=19 Hacer
+                        
+                        Escribir "N°",x+1 ;
+                        leer dato[x];
+                        Limpiar Pantalla;
+                        Escribir "";
+                        x<-x+1;
+                    FinMientras
+                    
+                    Escribir "";
+                    numerosPares(dato);
+                    Escribir "";
+                    numerosImpares(dato);
+                FinSubProceso
+                //---------------------------------------------------------------------------------------
+                Proceso Taller5
+                    
+                    ciclo();
+                FinProceso
+                
+            
+            </code>
+        </pre>
+        <nav>
+            <a class="regresar" href="Taller5FuncionesArreglos.html">
+                <img class="img-regresar" src="../../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>

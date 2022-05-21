@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller N°2: Condicionales-Ejercicio 5</title>
+    <link rel="stylesheet" href="../../Hoja de vida/css/estilos.css">
+    <link rel="stylesheet" href="../../css/estilosPortafolio.css">
+    <script defer src="../TalleresPseint.js"></script>
+</head>
+
+<body class="fondoTaller">
+    <div class="bloque">
+        <h1 class="titulo">TALLER N°2: CONDICIONALES- EJERCICIO 5</h1>
+
+
+        <p class="enunciado">La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una
+            aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas
+            características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada
+            cliente, se
+            tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se
+            presenten.</p>
+        <pre>
+            <code class="codigo">
+                package Ejercicio5;
+
+                import java.util.*;
+                
+                public class Main {
+                
+                    public static void main(String[] args) {
+                        Producto producto = new Producto();
+                        Menu menu1 = new Menu();
+                
+                        List productos = new ArrayList();
+                        productos.add("Aspirina");
+                        productos.add("Ibuprofeno");
+                        productos.add("Acetaminofen");
+                        productos.add("Dolex");
+                
+                        List productosVendidos = new ArrayList();
+                        for (int i = 0; i < productos.size(); i++) {
+                            productosVendidos.add(productos.get(i));
+                        }
+                
+                        List precio = new ArrayList();
+                        precio.add("$3000");
+                        precio.add("$4000");
+                        precio.add("$2000");
+                        precio.add("$3000");
+                
+                        Scanner lectura = new Scanner(System.in);
+                        Scanner texto = new Scanner(System.in);
+                        boolean menu = true;
+                
+                        while (menu) {
+                            menu1.menuInicio();
+                            int opcion = lectura.nextInt();
+                            System.out.println("");
+                            switch (opcion) {
+                
+                                case 1:
+                                    System.out.println("Elija el producto que desea comprar");
+                                    producto.listaproductos(productosVendidos);
+                                    int opcionP = lectura.nextInt();
+                                    System.out.println("");
+                
+                                    if (1 <= opcionP && opcionP <= 4) {
+                                        producto.comprarProducto(productosVendidos, productos, precio, opcionP - 1);
+                                        int opcionC = lectura.nextInt();
+                                        producto.opcionCompra(opcionC, productos, precio, productosVendidos, opcionC - 1);
+                                        menu = menu1.volverMenu();
+                                    }
+                                    break;
+                
+                                case 2:
+                                    System.out.println("Elija el producto que desea devolver");
+                                    producto.listaproductos(productos);
+                                    int opcionD = lectura.nextInt();
+                                    System.out.println("");
+                
+                                    if (1 <= opcionD && opcionD <= 4) {
+                                        producto.devolverProducto(productos, productosVendidos, precio, opcionD - 1);
+                                        String observacion = texto.nextLine();
+                                        System.out.println("\nNovedad registrada correctamente\n");
+                
+                                        menu = menu1.volverMenu();
+                                    }
+                                    break;
+                
+                                case 3:
+                                    System.out.println("'GRACIAS POR VISITARNOS, VUELVA PRONTO'");
+                                    menu = false;
+                
+                            }
+                        }
+                    }
+                
+                }
+            
+            </code>
+        </pre>
+        <p>Archivos relacionados
+        <ul>
+            <li class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio5/Producto.java">Producto</a>
+                </button>
+            </li>
+            <li  class="item">
+                <button class="archivos">
+                    <a class="link"
+                        href="https://github.com/LilianaGallego/Cantera1TallerJava/blob/taller2/src/Ejercicio5/Menu.java">Menu</a>
+                </button>
+            </li>
+            
+        </ul>
+        </p>
+
+        <br /><br />
+        <nav>
+            <a class="regresar" href="Taller2.html">
+                <img class="img-regresar" src="../../Hoja de vida/imagen/icono volver2.png" alt="">
+
+                Regresar
+            </a>
+        </nav>
+    </div>
+</body>
+
+</html>
