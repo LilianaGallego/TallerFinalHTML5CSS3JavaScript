@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin-top:30px;
+    font-family: sans-serif;
+    background-color: lightpink;
+}
+
+.formulario{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    padding: 5px;
+    box-shadow: 0 0 20px 1px rgb(100, 29, 94);
+    border: 2px solid rgba(63, 2, 45, 0.9);
+    border-radius: 10px;
+    position: relative;
+    background: rgba(233, 208, 225, 0.8);
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 0;
+    color: rgb(145, 26, 85);
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.entrada, .etiqueta, .enviar,.limpiar,.mensaje,.etiquetaMensaje{
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.entrada{
+    padding: 15px;
+    background: rgba(107, 88, 92, 0.1);
+    border: 1px solid rgb(124, 35, 0.1);
+    margin-bottom: 50px;
+}
+
+.entrada:focus{
+   outline: 1px solid rgba(0,0,0,0.7);
+}
+
+.entrada:focus + .etiqueta{
+    margin-top: -130px;
+}
+
+.etiqueta{
+    padding-left:10px;
+    color:rgb(0, 0, 0);
+    margin-top: -85px;
+    transition: all 0.2s;
+    position: absolute;
+    z-index: -20;
+}
+
+#mensaje{
+    padding: 10px;
+    background: rgba(107, 88, 92, 0.1);
+    border: 1px solid rgb(124, 35, 0.1);
+    margin-bottom: 30px;
+    
+}
+
+#mensaje:focus{
+    outline: 1px solid rgba(0,0,0,0.7);
+}
+#mensaje:focus + #etiquetaMensaje{
+    margin-top: -130px;
+}
+#etiquetaMensaje{
+    padding-left:10px;
+    color:rgb(0, 0, 0);
+    margin-top: -85px;
+    transition: all 0.2s;
+    position: absolute;
+    z-index: -20;
+}
+
+.enviar{
+    background-color: rgb(219, 85, 177);
+    color: rgb(68, 11, 49);
+    padding: 15px 15px;
+    border: 2px solid rgb(124, 35, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgb(146, 52, 107);
+    width: 200%;
+}
+
+.limpiar{
+    background-color: rgb(219, 85, 85);
+    color: rgb(68, 11, 14);
+    padding: 15px 15px;
+    margin-left: 177px;
+    border: 2px solid rgb(124, 35, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 5px rgb(146, 52, 107);
+    width: 77%;
+    
+}
+
+.noMover{
+    margin-top: -130px;
+}
