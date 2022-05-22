@@ -10,46 +10,119 @@
     <script defer src="index.js"></script>
 </head>
 
-<body>
-    <h1>Lista Ordenada de Frutas</h1>
+<body class="container">
+    
     <div class="frutas">
-        <ol  class="listaFrutas" id="frutas">
-            <li class="impar" >
-                <mark class="resaltar">Limón</mark>
-            </li>
-            <li class="par" >Sandia</li>
-            <li class="impar">
-                <mark class="resaltar">Mandarina</mark>
-            </li>
-            <li class="par">Banano</li>
-            <li class="impar">
-                <mark class="resaltar">Naranja</mark>
-            </li>
-            <li class="par">Papaya</li>
-            <li class="impar">
-                <mark class="resaltar">Melón</mark>
-            </li>
-            <li class="par">Granadilla</li>
-            <li class="impar">
-                <mark class="resaltar">Piña</mark>
-            </li>
-            <li class="par">Fresa</li>
+        <h1 class="titulo">Lista Ordenada de Frutas</h1>
+
+        <ol class="listaFrutas" >
+
+            <table class="tabla">
+
+                <tr>
+                    <td class="celda1">
+                        <li class="impar">
+
+                            <img id="frutas" src="imagenes/limon.jpg" alt="">
+                            <mark class="resaltar">
+                                Limón
+                            </mark>
+                        </li>
+                    </td>
+                    <td class="celda2">
+                        <li class="par">
+
+                            <img id="frutas" src="imagenes/sandia.jpg" alt="">
+                            <mark class="resaltar">
+                                Sandia
+                            </mark>
+
+                        </li>
+                    </td>
+                    <td class="celda1">
+                        <li class="impar">
+                            <img id="frutas" src="imagenes/mandarina.jpg" alt="">
+                            <mark class="resaltar">
+                                Mandarina
+                            </mark>
+                        </li>
+                    </td>
+                    <td class="celda2">
+                        <li class="par">
+                            <img id="frutas" src="imagenes/Banano.jpg" alt="">
+                            <mark class="resaltar">Banano</mark>
+                        </li>
+                    </td>
+                    <td class="celda2">
+                        <li class="impar">
+                            <img id="frutas" src="imagenes/fresa.jpg" alt="">
+                            <mark class="resaltar">
+                                Fresa
+                            </mark>
+                        </li>
+                    </td>
+                </tr>
+                
+                <tr>
+                    
+                    <td class="celda2">
+                        <li class="par">
+                            <img id="frutas" src="imagenes/papaya.jpg" alt="">
+                            <mark class="resaltar">
+                                Papaya
+                            </mark>
+                        </li>
+                    </td>
+                    <td class="celda1">
+                        <li class="impar">
+                            <img id="frutas" src="imagenes/melon.jpg" alt="">
+                            <mark class="resaltar">
+                                Melón
+                            </mark>
+
+                        </li>
+                    </td>
+                    <td class="celda2">
+                        <li class="par">
+                            <img id="frutas" src="imagenes/granadilla.jpg" alt="">
+                            <mark class="resaltar">
+                                Granadilla
+                            </mark>
+                        </li>
+                    </td>
+                    <td class="celda1">
+                        <li class="impar">
+                            <img id="frutas" src="imagenes/pina.jpg" alt="">
+                            <mark class="resaltar">
+                                Piña
+                            </mark>
+                        </li>
+                    </td>
+                    <td class="celda1">
+                        <li class="par">
+                            <img id="frutas" src="imagenes/naranja.jpg" alt="">
+                            <mark class="resaltar">
+                                Naranja
+                            </mark>
+                        </li>
+                    </td>
+                </tr>
+                
+            </table>
         </ol>
+
+        <table class="tabla">
+            <tr>
+                <td class="celda1">
+                    <button id="btnPar" onclick="par()">PAR</button>
+                </td>
+                <td class="celda2">
+                    <button id="btnImpar" onclick="impar()">IMPAR</button>
+                </td>
+            </tr>
+        </table>
     </div>
-    <table>
-        <tr>
-            <td>
-                <button id="btnPar" onclick="par()">PAR</button>
-            </td>
-            <td>
-                <button id="btnImpar" onclick="impar()">IMPAR</button>
-            </td>
-        </tr>
-    </table>
-        
-        
-    
-    
+
 </body>
 
 </html>
