@@ -10,10 +10,46 @@
 .bloque {
   border: none;
   font-size: 22px;
+  opacity: none;
+  position: relative;;
 }
 
-.talleresPseint,.fondoTaller{
-    background-color: rgb(218, 165, 218);
+.portafolio{
+    background-image: url('../imagenes/fondo1.jpg');
+    background-size: cover;
+	background-repeat: no-repeat;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+body{
+    background-image:url('/imagenes/frutas2.jpg');
+    
+
+}
+
+.portafolio::before{
+    content: "";
+    width: 110%;
+    height: 700px;
+    background-color: rgb(147, 136, 250);
+    position: absolute;
+    opacity: 0.4;
+}
+.talleresPseint{
+    background: linear-gradient(to bottom, #daa5da,#8e57b3) ;
+}
+
+.talleresJava{
+    background: linear-gradient(120deg, #ffaedb,#b836ad) ;
+}
+
+.fondoTaller{
+    background: linear-gradient(60deg, #ade67e,#628da1) ;
 }
 
 .lista{

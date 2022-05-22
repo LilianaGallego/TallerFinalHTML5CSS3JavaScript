@@ -79,8 +79,13 @@
 }
 
 .fondo-index {
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color:#a6c3ce;
+
 }
+
 
 .fondo-info{
     background-color:rgb(201, 155, 201);
@@ -99,11 +104,6 @@
 }
 .estudios{
     background-color: rgb(192, 147, 165);
-    
-}
-
-.portafolio{
-    background-color: rgb(224, 192, 205);
     
 }
 
@@ -171,14 +171,19 @@ a{
     border: solid rgb(3, 34, 8) 2px;
     border-radius: 15px;
     padding: 10px 25px ;
+    padding-top: 10px;
 
 }
 
 .info:active{
     background-color: rgb(180, 162, 197);
     color: rgb(127, 0, 139);
+    padding-top: 20px;
 }
 
+.perfil{
+    margin-top: 20px;
+}
 .descargar:link, .descargar:visited, .regresar:link,.regresar:visited{
     font-size:larger;
     background-color: rgb(241, 136, 215);

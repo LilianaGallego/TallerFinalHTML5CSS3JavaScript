@@ -1,7 +1,3 @@
-/*const main = () => {
-    
-}*/
-
 function cambiarMenu(){
     let siteNav = document.getElementById('site-nav');
         siteNav.classList.toggle('site-nav-open')
@@ -29,6 +25,7 @@ function cambiarColorBtn2(){
 
 function cambiarColorBtn3(){
     if(btn_lightgreen.value == "lightgreen"){
+
         fondoPagina.style.backgroundColor = btn_lightgreen.value;
         console.log(btn_lightgreen);
     }
@@ -46,7 +43,8 @@ for (let i = 0; i < acordeon.length; i++) {
         } else{
             txt.style.display = "block";
         }
-    });
-   
+    }); 
     
 }
+
+     
