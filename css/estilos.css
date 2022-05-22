@@ -3,26 +3,43 @@
 }
 
 body{
-    margin-top:30px;
-    font-family: sans-serif;
-    background-color: lightpink;
+    background-image:url('/imagenes/fondo-formulario-fullpage.png');
+    background-size: cover;
+	background-repeat: no-repeat;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+body::before{
+    content: "";
+    width:auto;
+    height: 575px;
+    background-color: rgb(250, 136, 212);
+    position: absolute;
+    opacity: 0.4;
 }
 
 .formulario{
-    width: 500px;
+    width: 400px;
     max-width: 100%;
     margin: auto;
-    padding: 5px;
-    box-shadow: 0 0 20px 1px rgb(100, 29, 94);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 20px 1px rgb(100, 29, 94);
     border: 2px solid rgba(63, 2, 45, 0.9);
     border-radius: 10px;
     position: relative;
-    background: rgba(233, 208, 225, 0.8);
+    background: rgba(233, 208, 225, 0.3);
+    opacity: none;
 }
 
 .titulo{
     text-align: center;
-    margin-top: 0;
     color: rgb(145, 26, 85);
     font-weight: bolder;
     margin-bottom: 30px;
@@ -36,13 +53,14 @@ body{
 
 .entrada{
     padding: 15px;
-    background: rgba(107, 88, 92, 0.1);
+    background: rgba(77, 67, 69, 0.1);
     border: 1px solid rgb(124, 35, 0.1);
     margin-bottom: 50px;
+    color: brown;
 }
 
 .entrada:focus{
-   outline: 1px solid rgba(0,0,0,0.7);
+   outline: 1px solid rgba(54, 6, 6, 0.7);
 }
 
 .entrada:focus + .etiqueta{
@@ -51,58 +69,86 @@ body{
 
 .etiqueta{
     padding-left:10px;
-    color:rgb(0, 0, 0);
+    color:rgba(126, 11, 11, 0.7);
     margin-top: -85px;
     transition: all 0.2s;
     position: absolute;
     z-index: -20;
+    opacity: 0.8;
 }
 
 #mensaje{
     padding: 10px;
-    background: rgba(107, 88, 92, 0.1);
+    background: rgba(37, 34, 35, 0.1);
     border: 1px solid rgb(124, 35, 0.1);
     margin-bottom: 30px;
-    
+    opacity: 0.8;
 }
 
 #mensaje:focus{
     outline: 1px solid rgba(0,0,0,0.7);
+    opacity: 0.8;
 }
 #mensaje:focus + #etiquetaMensaje{
     margin-top: -130px;
+    opacity: 0.8;
 }
 #etiquetaMensaje{
     padding-left:10px;
-    color:rgb(0, 0, 0);
+    color:rgba(0, 0, 0,0.9);
     margin-top: -85px;
     transition: all 0.2s;
     position: absolute;
     z-index: -20;
+    opacity: 0.8;
 }
 
 .enviar{
     background-color: rgb(219, 85, 177);
     color: rgb(68, 11, 49);
-    padding: 15px 15px;
+    padding: 15px 10px;
+    margin-left: 50px;
     border: 2px solid rgb(124, 35, 0.3);
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 5px 5px 5px 5px rgb(146, 52, 107);
-    width: 200%;
+    width: 90%;
 }
 
 .limpiar{
     background-color: rgb(219, 85, 85);
     color: rgb(68, 11, 14);
-    padding: 15px 15px;
-    margin-left: 177px;
+    padding: 15px 10px;
+    margin-left: 100px;
     border: 2px solid rgb(124, 35, 0.3);
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 5px 5px 5px 5px rgb(146, 52, 107);
-    width: 77%;
+    width: 60%;
     
+}
+
+.enviar:hover,.limpiar:hover{
+    background-color: rgb(221, 101, 137);
+    border: 2px solid rgb(41, 4, 46);
+    border-radius: 10px;
+    width: 120px;
+    font-size: 30px;
+    color: rgb(255, 0, 76);
+    
+
+}
+
+.limpiar:hover{
+    margin-left: 90px;
+
+}
+
+.enviar:active,.limpiar:active{
+    background-color: rgb(226, 101, 43);
+    border: 2px solid rgb(66, 13, 13);
+    border-radius: 10px;
+    color: rgb(88, 11, 11);
 }
 
 .noMover{
