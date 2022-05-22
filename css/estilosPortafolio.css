@@ -2,7 +2,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.titulo {
+.titulo, .video {
   text-align: center;
   font-size: 50px;
 }
@@ -92,22 +92,6 @@ body{
 .codigo{
     color: rgb(10, 1, 10);
     font-size:18px ;
-}
-
-video{
-    width: 50%;
-    margin-left: 100px;
-    background: transparent;
-    
-}
-
-.mostrarVideo{
-  padding-left: 160px;
-}
-
-.fm-video{
-    width: 500px;
-
 }
 
 img{
